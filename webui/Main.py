@@ -26,6 +26,7 @@ from app.models.schema import (
 from app.services import llm, voice
 from app.services import task as tm
 from app.utils import utils
+from app.utils.video_ideas_csv import list_local_idea_csv_files, parse_ideas_csv
 
 st.set_page_config(
     page_title="MoneyPrinterTurbo",
@@ -779,6 +780,82 @@ uploaded_audio_file = None
 with left_panel:
     with st.container(border=True):
         st.write(tr("Video Script Settings"))
+
+        with st.expander(tr("Import Ideas CSV"), expanded=False):
+            csv_source = st.radio(
+                tr("CSV Source"),
+                options=["local", "upload"],
+                format_func=lambda value: tr("CSV Source Local")
+                if value == "local"
+                else tr("CSV Source Upload"),
+                horizontal=True,
+                key="ideas_csv_source",
+            )
+
+            idea_rows: list[dict[str, str]] = []
+            csv_error = None
+
+            if csv_source == "upload":
+                uploaded_csv = st.file_uploader(
+                    tr("Upload Ideas CSV"),
+                    type=["csv"],
+                    key="ideas_csv_upload",
+                )
+                if uploaded_csv is not None:
+                    try:
+                        idea_rows = parse_ideas_csv(uploaded_csv.getvalue())
+                    except ValueError as exc:
+                        csv_error = str(exc)
+            else:
+                local_csv_files = list_local_idea_csv_files(root_dir)
+                if not local_csv_files:
+                    st.caption(tr("No local ideas CSV found"))
+                else:
+                    selected_csv = st.selectbox(
+                        tr("Select Ideas CSV File"),
+                        options=local_csv_files,
+                        format_func=lambda path: path.name,
+                        key="ideas_csv_local_file",
+                    )
+                    if selected_csv is not None:
+                        try:
+                            idea_rows = parse_ideas_csv(
+                                selected_csv.read_text(encoding="utf-8")
+                            )
+                        except ValueError as exc:
+                            csv_error = str(exc)
+
+            if csv_error:
+                st.error(csv_error)
+            elif idea_rows:
+                st.caption(tr("Ideas CSV Rows Found").format(count=len(idea_rows)))
+
+                def _idea_label(index: int) -> str:
+                    row = idea_rows[index]
+                    theme = row["theme"]
+                    if len(theme) > 60:
+                        theme = f"{theme[:57]}..."
+                    category = row.get("category") or tr("Auto Detect")
+                    return f"{index + 1}. [{category}] {theme}"
+
+                selected_row = st.selectbox(
+                    tr("Select Idea Row"),
+                    options=range(len(idea_rows)),
+                    format_func=_idea_label,
+                    key="ideas_csv_row",
+                )
+                preview = idea_rows[selected_row]
+                st.markdown(f"**{tr('Preview Theme')}** {preview['theme']}")
+                st.markdown(f"**{tr('Preview Script')}** {preview['script']}")
+                st.markdown(f"**{tr('Preview Keywords')}** {preview['keywords']}")
+
+                if st.button(tr("Load Idea Into Form"), key="load_idea_csv"):
+                    st.session_state["video_subject"] = preview["theme"]
+                    st.session_state["video_script"] = preview["script"]
+                    st.session_state["video_terms"] = preview["keywords"]
+                    st.success(tr("Idea Loaded Into Form"))
+                    st.rerun()
+
         params.video_subject = st.text_input(
             tr("Video Subject"),
             key="video_subject",

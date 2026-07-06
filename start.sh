@@ -10,6 +10,8 @@ OLLAMA_CONTAINER="ollama"
 OLLAMA_URL="http://127.0.0.1:11434"
 OLLAMA_MODEL_DEFAULT="qwen2.5:7b"
 WEBUI_URL="http://127.0.0.1:8501"
+IDEAS_UI_URL="http://127.0.0.1:8502"
+IDEAS_PID=""
 
 if ! command -v uv >/dev/null 2>&1; then
   echo "Erro: uv nao encontrado. Instale com: curl -LsSf https://astral.sh/uv/install.sh | sh"
@@ -66,6 +68,21 @@ if ! docker exec "${OLLAMA_CONTAINER}" ollama list 2>/dev/null | awk 'NR>1 {prin
 else
   echo "Modelo Ollama pronto: ${OLLAMA_MODEL}"
 fi
+
+cleanup() {
+  if [ -n "${IDEAS_PID}" ] && kill -0 "${IDEAS_PID}" 2>/dev/null; then
+    kill "${IDEAS_PID}" 2>/dev/null || true
+  fi
+}
+trap cleanup EXIT INT TERM
+
+echo "Subindo Ideas UI em ${IDEAS_UI_URL}"
+uv run streamlit run ./webui/Ideas.py \
+  --browser.gatherUsageStats=False \
+  --server.showEmailPrompt=False \
+  --server.port 8502 \
+  --server.address 127.0.0.1 &
+IDEAS_PID=$!
 
 echo "Subindo WebUI em ${WEBUI_URL}"
 exec uv run streamlit run ./webui/Main.py \

@@ -1,0 +1,152 @@
+[
+  {
+    "category": "finances",
+    "theme": "Pequenas decisões, grande diferença",
+    "script": "Você não precisa ganhar mais para começar a organizar sua vida financeira. Precisa decidir para onde o dinheiro vai antes de ele sumir.",
+    "keywords": "wallet, financial planning, calculator, notebook, money"
+  },
+  {
+    "category": "finances",
+    "theme": "Pequenas decisões, grande diferença",
+    "script": "Guardar dez reais por dia parece pouco. Em um ano, isso vira um hábito. E hábito muda destino.",
+    "keywords": "piggy bank, coins, savings, daily habit, growth"
+  },
+  {
+    "category": "finances",
+    "theme": "Pequenas decisões, grande diferença",
+    "script": "Antes de comprar por impulso, pergunte: isso me aproxima ou me afasta da vida que eu quero?",
+    "keywords": "shopping, credit card, decision, thinking, consumerism"
+  },
+  {
+    "category": "finances",
+    "theme": "Pequenas decisões, grande diferença",
+    "script": "Dívida não some com sorte. Some com plano, constância e coragem de dizer não para o que não cabe no bolso.",
+    "keywords": "bills, budget, discipline, focus, organization"
+  },
+  {
+    "category": "finances",
+    "theme": "Pequenas decisões, grande diferença",
+    "script": "Orçamento não é prisão. É liberdade para gastar sem culpa no que realmente importa.",
+    "keywords": "financial freedom, smiling, goals, balance, prosperity"
+  },
+  {
+    "category": "finances",
+    "theme": "Reserva de emergência",
+    "script": "Reserva de emergência não é luxo. É paz quando a vida aperta e o salário ainda não chegou.",
+    "keywords": "financial security, calm, protection, saved money, peace"
+  },
+  {
+    "category": "finances",
+    "theme": "Reserva de emergência",
+    "script": "Comece com uma meta simples: um mês de despesas. Depois dois. Um passo de cada vez.",
+    "keywords": "goals, progress, stairs, step by step, planning"
+  },
+  {
+    "category": "finances",
+    "theme": "Reserva de emergência",
+    "script": "Emergência não é viagem, nem celular novo. É saúde, conta, imprevisto. Separe isso na sua cabeça.",
+    "keywords": "hospital, bills, emergency, priorities, responsibility"
+  },
+  {
+    "category": "finances",
+    "theme": "Reserva de emergência",
+    "script": "Ter dinheiro guardado te dá algo raro: tempo para pensar antes de decidir.",
+    "keywords": "reflection, time, mindful decision, calm, choice"
+  },
+  {
+    "category": "finances",
+    "theme": "Reserva de emergência",
+    "script": "Não espere sobrar muito. Sobrou pouco? Guarde pouco. O importante é começar hoje.",
+    "keywords": "start now, consistency, small steps, discipline, saving"
+  },
+  {
+    "category": "peace_of_mind",
+    "theme": "Respire e solte",
+    "script": "Nem tudo precisa de resposta agora. Às vezes, paz começa quando você para de forçar o controle.",
+    "keywords": "nature, silence, sunset, calm, contemplation"
+  },
+  {
+    "category": "peace_of_mind",
+    "theme": "Respire e solte",
+    "script": "Respire fundo. Solte os ombros. O problema pode continuar, mas você não precisa carregá-lo inteiro agora.",
+    "keywords": "breathing, meditation, relaxation, yoga, inner peace"
+  },
+  {
+    "category": "peace_of_mind",
+    "theme": "Respire e solte",
+    "script": "Sua mente acelera quando você tenta resolver tudo de uma vez. Escolha uma coisa. Faça com calma.",
+    "keywords": "focus, peaceful mind, one task, mental clarity, serenity"
+  },
+  {
+    "category": "peace_of_mind",
+    "theme": "Respire e solte",
+    "script": "Paz não é ausência de problema. É aprender a não deixar cada problema roubar sua presença.",
+    "keywords": "mindfulness, emotional balance, soft light, harmony, presence"
+  },
+  {
+    "category": "peace_of_mind",
+    "theme": "Respire e solte",
+    "script": "Hoje, permita-se descansar sem culpa. Descanso também é parte do caminho.",
+    "keywords": "rest, sleep, tranquility, self care, relaxation"
+  },
+  {
+    "category": "peace_of_mind",
+    "theme": "Gratidão no dia a dia",
+    "script": "Antes de reclamar do que falta, olhe para o que já sustenta você hoje. Gratidão acalma a mente.",
+    "keywords": "gratitude, sunrise, morning coffee, sunlight, simplicity"
+  },
+  {
+    "category": "peace_of_mind",
+    "theme": "Gratidão no dia a dia",
+    "script": "Três coisas simples: um teto, uma refeição, alguém que te escuta. Às vezes, isso já é muito.",
+    "keywords": "home, family, meal, hug, connection"
+  },
+  {
+    "category": "peace_of_mind",
+    "theme": "Gratidão no dia a dia",
+    "script": "Gratidão não nega a dor. Ela só lembra que a vida não é feita só de perda.",
+    "keywords": "hope, healing, flowers, rebirth, light"
+  },
+  {
+    "category": "peace_of_mind",
+    "theme": "Gratidão no dia a dia",
+    "script": "Agradeça pelo que deu certo hoje, mesmo que tenha sido pequeno. Pequeno também conta.",
+    "keywords": "small victory, smile, achievement, details, simple happiness"
+  },
+  {
+    "category": "peace_of_mind",
+    "theme": "Gratidão no dia a dia",
+    "script": "Quando o coração agradece, a ansiedade perde um pouco de espaço. Experimente agora.",
+    "keywords": "heart, mental calm, deep breathing, peace, wellness"
+  },
+  {
+    "category": "self_help",
+    "theme": "Comece de onde está",
+    "script": "Você não precisa estar pronto para começar. Precisa começar para ficar pronto.",
+    "keywords": "beginning, first step, motivation, action, movement"
+  },
+  {
+    "category": "self_help",
+    "theme": "Comece de onde está",
+    "script": "Progresso real é silencioso: acordar, tentar de novo, não desistir no segundo erro.",
+    "keywords": "persistence, morning routine, effort, discipline, overcoming"
+  },
+  {
+    "category": "self_help",
+    "theme": "Comece de onde está",
+    "script": "Compare-se com quem você era ontem, não com a vida perfeita dos outros.",
+    "keywords": "personal growth, mirror, self awareness, growth, journey"
+  },
+  {
+    "category": "self_help",
+    "theme": "Comece de onde está",
+    "script": "Um passo hoje vale mais que dez planos que você nunca executa.",
+    "keywords": "immediate action, walking, execution, focus, determination"
+  },
+  {
+    "category": "self_help",
+    "theme": "Comece de onde está",
+    "script": "Você já sobreviveu a dias difíceis. Isso prova que tem mais força do que imagina.",
+    "keywords": "inner strength, resilience, mountain, victory, courage"
+  }
+]
